@@ -2,3 +2,5 @@ Fastapi
 uvicorn
 sqlalchemy
 pymysql
+sklearn
+requests
