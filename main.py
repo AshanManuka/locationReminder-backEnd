@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Depends, status
-from pydantic import BaseModel
+from pydantic import BaseModel, condecimal
 from typing import Annotated
 import models
 from database import engine, SessionLocal
@@ -11,6 +11,8 @@ models.Base.metadata.create_all(bind=engine)
 
 class PlaceBase(BaseModel):
     placename:str
+    latitude: condecimal(ge=-90, le=90, decimal_places=6)
+    longitude: condecimal(ge=-180, le=180, decimal_places=6)
     
 
 def get_db():
