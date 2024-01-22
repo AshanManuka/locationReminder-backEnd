@@ -2,5 +2,5 @@ Fastapi
 uvicorn
 sqlalchemy
 pymysql
-sklearn
+scikit-learn
 requests
