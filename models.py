@@ -6,6 +6,7 @@ class Place(Base):
     
     id = Column(Integer, primary_key=True, index=True)
     placename = Column(String(50))
+    category = Column(String(45))
     latitude = Column(DECIMAL(9, 6))
     longitude = Column(DECIMAL(9, 6))
     
