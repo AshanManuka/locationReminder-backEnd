@@ -33,7 +33,7 @@ def train_knn_model(db: Session):
 app = FastAPI()
 
 # Train the KNN model during application startup
-knn_model, scaler = train_knn_model(SessionLocal())
+#knn_model, scaler = train_knn_model(SessionLocal())
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -59,17 +59,17 @@ def get_db():
 db_dependency = Annotated[Session, Depends(get_db)]
 
 # Endpoint to predict the nearest place
-@app.post("/predict_place/")
-async def predict_place(current_location: PlaceBase, db: db_dependency):
-    current_location_scaled = scaler.transform([[current_location.latitude, current_location.longitude]])
-    predicted_place = knn_model.predict(current_location_scaled)
-    print(predicted_place)
-    place_details = db.query(models.Place).filter_by(placename=predicted_place[0]).first()
+# @app.post("/predict_place/")
+# async def predict_place(current_location: PlaceBase, db: db_dependency):
+#     current_location_scaled = scaler.transform([[current_location.latitude, current_location.longitude]])
+#     predicted_place = knn_model.predict(current_location_scaled)
+#     print(predicted_place)
+#     place_details = db.query(models.Place).filter_by(placename=predicted_place[0]).first()
     
-    if place_details:
-        return PlaceResponse(**place_details.__dict__)
-    else:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Place details not found.")
+#     if place_details:
+#         return PlaceResponse(**place_details.__dict__)
+#     else:
+#         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Place details not found.")
     
 
 def save_place_to_database(db: Session, place_info: dict):
