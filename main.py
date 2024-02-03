@@ -80,8 +80,8 @@ def save_place_to_database(db: Session, place_info: dict):
 
 @app.get("/hopePlaces/")
 async def get_near_places(keyword: str, latitude: float, longitude: float, db: db_dependency):
-    api_key = "fuck"
-    url = f"https://maps.googleapis.com/maps/api/place/textsearch/json?query=+{keyword}+near+{latitude},{longitude}&key={api_key}"
+    api_key = "AIzaSyBz9TaPw92znCNWtpHHWX_4ojDaeZ4Cw_E"
+    url = f"https://maps.googleapis.com/maps/api/place/textsearch/json?query=+{keyword}+near+{latitude},{longitude}&key={api_key}&region=lk"
     
     try:
         response = requests.get(url)
