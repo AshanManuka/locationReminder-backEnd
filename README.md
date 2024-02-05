@@ -4,6 +4,13 @@ The Location Reminder application utilizes advanced technologies to suggest the 
 
 The application incorporates a user-friendly form concept, allowing users to input their desired location and preferences seamlessly. The backend leverages the Google Places API to fetch real-time information about nearby places, ensuring accurate and up-to-date suggestions. The entire system is deployed on an Amazon EC2 instance, ensuring scalability and reliability. Users can receive personalized recommendations for places to visit, making the Location Reminder application a cutting-edge solution for personalized and intelligent location-based suggestions.
 
+
 <br><br>
 <b>The Front-End(Mobile Application) is in separate Repository</b>
-<h2><a href="https://github.com/AshanManuka">Front-End</a></h2>
+<h2><a href="https://github.com/AshanManuka/Location-Reminder">visit to Front-End</a></h2>
+
+<br>
+<h3>Used Technologies,</h3>
+<h4>
+          Python, KNN Model, MySql, ORM, GoogleAPI 
+</h4>
