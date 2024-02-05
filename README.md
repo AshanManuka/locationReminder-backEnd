@@ -12,5 +12,5 @@ The application incorporates a user-friendly form concept, allowing users to inp
 <br>
 <h3>Used Technologies,</h3>
 <h4>
-          Python, KNN Model, MySql, ORM, GoogleAPI 
+          Python, FastAPI, uvicorn, sqlalchemy, pymysql, scikit-learn, requests, KNN Model, MySql, ORM, GoogleAPI 
 </h4>
