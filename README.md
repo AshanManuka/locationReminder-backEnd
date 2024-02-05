@@ -1,4 +1,8 @@
-<h2>About</h2>
+<h1>Location Reminder Back-End</h1>
+<br>
+
+About
+-----------------
 
 The Location Reminder application utilizes advanced technologies to suggest the nearest places of interest based on user preferences. It employs a robust K-Nearest Neighbors (KNN) machine learning model, trained on latitude and longitude data stored in a MySQL database. The backend is powered by FastAPI, providing efficient and secure communication between the front end and the database.
 
